@@ -46,7 +46,12 @@ class student:
         return self.student_id_code
 
     @property
+    def tuition(self):
+        return self.tuition
+
+    @property
     def discount(self):
         return self.discount
+
     
 
