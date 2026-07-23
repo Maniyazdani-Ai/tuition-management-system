@@ -12,6 +12,14 @@ class student:
     def all_tuition(self):
         all_tuition = self.units * student.tuition_per_unit
         return all_tuition
-    
+
+    def discount(self):
+        if self.units < 12:
+            return self.all_tuition()
+        elif 12 <= self.units <= 18:
+            return self.all_tuition() * 0.05
+        else:
+            return self.all_tuition * 0.1
+          
 
 
