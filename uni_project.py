@@ -8,6 +8,8 @@ class student:
         self.study = study
         self.units = units
         self.student_id_code = student.student_id
+        self.tuition = self.all_tuition()
+        self.finaly_tuition = self.discount()
 
     def all_tuition(self):
         all_tuition = self.units * student.tuition_per_unit
