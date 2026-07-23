@@ -1,6 +1,8 @@
 class student:
+
     tuition_per_unit = 12000000
-    student_id = 4000
+    student_id = 4000 
+
     def __init__(self,name,family,study,units):
         student.student_id += 1
         self.name = name
@@ -22,6 +24,29 @@ class student:
             return self.all_tuition() * 0.05
         else:
             return self.all_tuition * 0.1
-          
 
+    @property
+    def name(self):
+        return self.name
+
+    @property
+    def family(self):
+        return self.family
+
+    @property
+    def study(self):
+        return self.study
+
+    @property
+    def units(self):
+        return self.units
+
+    @property
+    def studeny_id_code(self):
+        return self.student_id_code
+
+    @property
+    def discount(self):
+        return self.discount
+    
 
