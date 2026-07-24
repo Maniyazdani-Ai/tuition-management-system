@@ -5,10 +5,10 @@ class student:
 
     def __init__(self,name,family,study,units):
         student.student_id += 1
-        self._name = name
-        self._family = family
-        self._study = study
-        self._units = units
+        self.name = name
+        self.family = family
+        self.study = study
+        self.units = units
         self._student_id_code = student.student_id
         self._finaly_tuition = self.discount()
          
@@ -52,20 +52,36 @@ class student:
 
     @name.setter
     def name(self,name):
-        self._name = name
+        if not isinstance(name,str):
+            raise TypeError("name must be string")
+        else:
+            self._name = name
 
     @family.setter
     def family(self,family):
-        self._family = family
+        if not isinstance(family,str):
+            raise TypeError("family most be string")
+        else:
+            self._family = family
 
     @study.setter
     def study(self,study):
-        self._study = study
+        if not isinstance(study,str):
+            raise TypeError("study most be string")
+        else:
+            self._study = study
 
     @units.setter
     def units(self,units):
-        self._units = units
+        if not isinstance(units,int):
+            raise TypeError("units most be integer number")
+        else:
+            self._units = units
 
     def __str__(self):
         return f"name and family : {self._name} {self._family}\nstudy:{self._study}\nunits : {self._units}\nstudent code : {self._student_id_code}\ntuition:{self._finaly_tuition}"
 
+try:
+    p = student("mani",20,30,"100")
+except TypeError as f:
+    print(f"{f}") 
