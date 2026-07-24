@@ -81,7 +81,3 @@ class student:
     def __str__(self):
         return f"name and family : {self._name} {self._family}\nstudy:{self._study}\nunits : {self._units}\nstudent code : {self._student_id_code}\ntuition:{self._finaly_tuition}"
 
-try:
-    p = student("mani",20,30,"100")
-except TypeError as f:
-    print(f"{f}") 
