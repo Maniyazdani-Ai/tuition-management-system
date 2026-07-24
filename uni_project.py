@@ -69,7 +69,8 @@ class student:
     def units(self,value):
         self.units = value
 
-
+    def __str__(self):
+        return f"name and family : {self.name} {self.family}\nstudy:{self.study}\nunits : {self.units}\nstudent code : {self.student_id_code}\ntuition:{self.tuition}"
 
 
 
