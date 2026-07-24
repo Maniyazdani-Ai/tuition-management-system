@@ -14,13 +14,13 @@ class student:
          
 
     def discount(self):
-        all_tuition = self._units * student.tuition_per_unit
+        total_tuition = self._units * student.tuition_per_unit
         if self._units < 12:
-            return all_tuition
+            return total_tuition
         elif 12 <= self._units <= 18:
-            return all_tuition * 0.05
+            return total_tuition * 0.95
         else:
-            return all_tuition * 0.1
+            return total_tuition * 0.90
 
     @property
     def name(self):
