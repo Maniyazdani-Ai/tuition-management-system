@@ -1,6 +1,6 @@
 class student:
 
-    tuition_per_unit = 12000000
+    tuition_per_unit = 1000000
     student_id = 4000 
 
     def __init__(self,name,family,study,units):
@@ -15,9 +15,9 @@ class student:
 
     def discount(self):
         all_tuition = self._units * student.tuition_per_unit
-        if self.units < 12:
+        if self._units < 12:
             return all_tuition
-        elif 12 <= self.units <= 18:
+        elif 12 <= self._units <= 18:
             return all_tuition * 0.05
         else:
             return all_tuition * 0.1
@@ -67,9 +67,5 @@ class student:
         self._units = units
 
     def __str__(self):
-        return f"name and family : {self.name} {self.family}\nstudy:{self.study}\nunits : {self.units}\nstudent code : {self.student_id_code}\ntuition:{self.tuition}"
-
-
-
-    
+        return f"name and family : {self._name} {self._family}\nstudy:{self._study}\nunits : {self._units}\nstudent code : {self._student_id_code}\ntuition:{self._finaly_tuition}"
 
