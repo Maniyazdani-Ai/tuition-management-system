@@ -53,5 +53,25 @@ class student:
     def discount(self):
         return self.discount
 
+    @name.setter
+    def name(self,value):
+        self.name = value
+
+    @family.setter
+    def family(self,value):
+        self.family = value
+
+    @study.setter
+    def study(self,value):
+        self.study = value
+
+    @units.setter
+    def units(self,value):
+        self.units = value
+
+
+
+
+
     
 
